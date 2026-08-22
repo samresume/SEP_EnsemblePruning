@@ -1,4 +1,4 @@
-# High-Skill Solar Energetic Particle Prediction under Extreme Class Imbalance
+# Impostor Triplets and Winnowed Ensemble: High-Skill Solar Energetic Particle Prediction under Extreme Class Imbalance
 
 Code and data for the paper — an end-to-end pipeline that forecasts Solar Energetic Particle (SEP) events from pre-flare multivariate time series under a `103:1` class imbalance.
 
