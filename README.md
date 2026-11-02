@@ -78,7 +78,7 @@ gunzip -k dataset/*.csv.gz
 
 ```bash
 git clone https://github.com/samresume/SEP_Ensemble_Triplets.git
-cd SEP_Ensemble_Triplets
+cd SEP_EnsemblePruning
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
