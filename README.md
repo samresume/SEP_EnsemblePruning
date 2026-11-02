@@ -1,4 +1,4 @@
-# Impostor Triplets and Winnowed Ensemble: High-Skill Solar Energetic Particle Prediction under Extreme Class Imbalance
+# Solar Energetic Particle Forecasting with Deep Borderline Cleaning and Ensemble Pruning
 
 Code and data for the paper — an end-to-end pipeline that forecasts Solar Energetic Particle (SEP) events from pre-flare multivariate time series under a `103:1` class imbalance.
 
@@ -6,11 +6,9 @@ Code and data for the paper — an end-to-end pipeline that forecasts Solar Ener
 
 ## Abstract
 
-Solar energetic particle (SEP) events are the space weather phenomenon that most directly threatens human activity beyond low Earth orbit, delivering ionizing radiation doses to crews and inducing upsets in spacecraft electronics on timescales too short for reactive mitigation. Yet SEP forecasting remains among the least reliably solved problems in the field, in part because extreme class imbalance, with more than 100 NonSEP samples for every SEP sample, makes it difficult to detect rare events without producing excessive false alarms. State-of-the-art systems consequently reach True Skill Statistic (TSS) values near 0.63 while misclassifying a substantial fraction of NonSEP cases.
+Solar energetic particle (SEP) events are the space weather phenomenon that most directly threatens human activity beyond low Earth orbit, delivering ionizing radiation doses to crews and inducing upsets in spacecraft electronics on timescales too short for reactive mitigation. Yet SEP forecasting remains among the least reliably solved problems in the field.
 
-We present four contributions built on a multi-instrument OMNI/GOES dataset of 17,794 pre-flare multivariate time series: (i) a per-channel **hybrid normalization** scheme fitted strictly on the training split; (ii) a wrapper-based **Sequential Forward Selection** procedure scored by the downstream classifier's own TSS, which reduces ten instrument channels to three; (iii) **Impostor Triplets**, a borderline cleaning method that removes majority-class samples remaining indistinguishable from genuine SEP events inside an embedding trained explicitly to separate the classes; and (iv) the **Winnowed Ensemble**, a pruned bagging architecture whose members are diversified along three independent axes, competitively pruned, and combined by a rank-weighted vote.
-
-On a chronologically held-out test set that preserves the operational class ratio of `103:1`, the complete pipeline attains a TSS of **0.71**. Ablation experiments identify competitive pruning and rank-weighted combination as the components that carry the ensemble's advantage, and show that ensemble *diversity*, rather than ensemble *size*, determines whether ensembling improves performance.
+We make four contributions to high-skill SEP forecasting using a multi-instrument OMNI/GOES catalog of 17,794 pre-flare multivariate time series: **hybrid normalization**, a per-channel scheme fitted only on the training partition; **skill-driven channel subset selection**, a wrapper-based procedure evaluated using the downstream classifier’s True Skill Statistic (TSS) that reduces ten instrument channels to three; **deep borderline cleaning**, four novel methods, Deep Edited Nearest Neighbours, Deep Tomek Links, Autoencoder Novelty Detection, and Impostor Triplets, that identify and remove ambiguous NonSEP training examples that closely resemble SEP events; and the **Winnowed Ensemble**, a pruned bagging architecture that diversifies members along three independent axes, retains the strongest candidates, and combines their predictions using a rank-weighted average.
 
 ---
 
