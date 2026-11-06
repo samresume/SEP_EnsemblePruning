@@ -1,6 +1,6 @@
 # Solar Energetic Particle Forecasting with Deep Borderline Cleaning and Ensemble Pruning
 
-Code and data for the paper — an end-to-end pipeline that forecasts Solar Energetic Particle (SEP) events from pre-flare multivariate time series under a `103:1` class imbalance.
+Code and data for the paper — an end-to-end pipeline that forecasts Solar Energetic Particle (SEP) events from pre-flare multivariate time series under a `104:1` class imbalance.
 
 ---
 
@@ -37,12 +37,6 @@ The single largest effect is not a modelling choice but a normalization choice: 
 <p align="center"><img src="figures/related_work.png" alt="Comparison with published work" width="500"></p>
 
 Only TSS and PoD are comparable across studies — every published model is evaluated on its own partition, with class balances from `1:1` to `42:1` against `103.7:1` here. Precision and accuracy are strongly balance-dependent and are not comparable.
-
-### Which ensemble components matter
-
-<p align="center"><img src="figures/ablation.png" alt="Component ablation" width="500"></p>
-
-Removing one component at a time from the Winnowed Ensemble. Pruning is the largest single effect (−0.056 TSS), followed by rank weighting (−0.047). The shaded band is what one reclassified test event is worth on a 34-event partition (0.029 TSS) — the bottom two rows fall inside it and should not be read as established.
 
 ---
 
