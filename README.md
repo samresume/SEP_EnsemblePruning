@@ -44,6 +44,8 @@ Only TSS and PoD are comparable across studies — every published model is eval
 
 `dataset/` holds ten instrument channels, one gzipped CSV each. Every row is one event: a label plus a 288-step series covering the 24 hours before flare onset at 5-minute cadence.
 
+<p align="center"><img src="figures/dataset_overview.png" alt="Dataset" width="300"></p>
+
 | Source | Channels |
 |---|---|
 | OMNI | `V`, `Vx`, `Np`, `Tp`, `F` |
